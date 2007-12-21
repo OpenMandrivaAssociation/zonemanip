@@ -12,6 +12,7 @@ Requires:	libdbi-drivers-dbd-mysql
 BuildRequires:	automake1.7
 BuildRequires:	libdbi-devel
 BuildRequires:	libshhopt-devel
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 zonemanip is a command line tool for manipulating records in a
