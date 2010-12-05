@@ -1,7 +1,7 @@
 Summary:	Command line tool for PowerDNS and its MySQL backend 
 Name:		zonemanip
 Version:	0.1.4
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL
 Group:		System/Servers
 URL:		http://soren.overgaard.org/cgi-bin/index?t=stuff
