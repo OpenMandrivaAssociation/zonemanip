@@ -1,7 +1,7 @@
 Summary:	Command line tool for PowerDNS and its MySQL backend 
 Name:		zonemanip
 Version:	0.1.4
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPL
 Group:		System/Servers
 URL:		http://soren.overgaard.org/cgi-bin/index?t=stuff
@@ -9,7 +9,7 @@ Source0:	http://soren.overgaard.org/stuff/%{name}-%{version}.tar.bz2
 Patch0:		zonemanip-0.1.4-shhopt_fix.diff
 Requires:	pdns-backend-mysql
 Requires:	libdbi-drivers-dbd-mysql
-BuildRequires:	automake1.7
+BuildRequires:	automake
 BuildRequires:	libdbi-devel
 BuildRequires:	libshhopt-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
@@ -28,7 +28,7 @@ PTR records are supported.
 
 %build
 rm -f configure
-libtoolize --copy --force; aclocal-1.7; automake-1.7 --add-missing --copy --foreign; autoconf
+libtoolize --copy --force; aclocal; automake --add-missing --copy --foreign; autoconf
 
 %configure2_5x
 
