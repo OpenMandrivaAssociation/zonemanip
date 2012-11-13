@@ -1,0 +1,37 @@
+diff -Naur zonemanip-0.1.4/Makefile.am zonemanip-0.1.4.oden/Makefile.am
+--- zonemanip-0.1.4/Makefile.am	2003-12-30 22:08:37.000000000 +0100
++++ zonemanip-0.1.4.oden/Makefile.am	2006-04-28 09:00:33.000000000 +0200
+@@ -1,5 +1,5 @@
+ # $Id: Makefile.am,v 1.2 2003/06/11 15:44:47 boll Exp $
+-INCLUDES = -I/usr/lib
++INCLUDES = -I/usr/include/shhopt
+ LDADD = -ldl -ldbi -lshhopt
+ bin_PROGRAMS = zonemanip
+ zonemanip_SOURCES = zonemanip.c \
+diff -Naur zonemanip-0.1.4/configure.ac zonemanip-0.1.4.oden/configure.ac
+--- zonemanip-0.1.4/configure.ac	2003-12-30 21:51:25.000000000 +0100
++++ zonemanip-0.1.4.oden/configure.ac	2006-04-28 09:00:49.000000000 +0200
+@@ -5,9 +5,9 @@
+ AM_INIT_AUTOMAKE(zonemanip,0.1.4)
+ AM_CONFIG_HEADER(config.h)
+ AC_PROG_CC
+-AC_CHECK_HEADER(shhopt.h,
++AC_CHECK_HEADER(shhopt/shhopt.h,
+ 	,
+-	AC_MSG_ERROR(Cannot find shhopt.h),)
++	AC_MSG_ERROR(Cannot find shhopt/shhopt.h),)
+ AC_CHECK_HEADER(dbi/dbi.h,
+ 	,
+ 	AC_MSG_ERROR(Cannot find dbi/dbi.h"))
+diff -Naur zonemanip-0.1.4/zonemanipfunc.h zonemanip-0.1.4.oden/zonemanipfunc.h
+--- zonemanip-0.1.4/zonemanipfunc.h	2003-12-30 21:15:43.000000000 +0100
++++ zonemanip-0.1.4.oden/zonemanipfunc.h	2006-04-28 08:59:42.000000000 +0200
+@@ -5,7 +5,7 @@
+ #include <stdio.h>
+ #include <fcntl.h>
+ #include <dbi/dbi.h>
+-#include <shhopt.h>
++#include <shhopt/shhopt.h>
+ #include <unistd.h>
+ #include <string.h>
+ #include <sys/timeb.h>
