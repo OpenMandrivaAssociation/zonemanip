@@ -4,7 +4,7 @@ Version:	0.1.4
 Release:	9
 License:	GPL
 Group:		System/Servers
-URL:		http://soren.overgaard.org/cgi-bin/index?t=stuff
+URL:		https://soren.overgaard.org/cgi-bin/index?t=stuff
 Source0:	http://soren.overgaard.org/stuff/%{name}-%{version}.tar.bz2
 Patch0:		zonemanip-0.1.4-shhopt_fix.diff
 Requires:	pdns-backend-mysql
