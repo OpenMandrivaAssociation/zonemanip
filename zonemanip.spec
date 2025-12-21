@@ -9,6 +9,9 @@ Source0:	http://soren.overgaard.org/stuff/%{name}-%{version}.tar.bz2
 Patch0:		zonemanip-0.1.4-shhopt_fix.diff
 Requires:	pdns-backend-mysql
 Requires:	libdbi-drivers-dbd-mysql
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	automake
 BuildRequires:	libdbi-devel
 BuildRequires:	libshhopt-devel
